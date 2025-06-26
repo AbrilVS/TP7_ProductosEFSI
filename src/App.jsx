@@ -6,6 +6,8 @@ import './App.css'
 import './styles/Home.css'
 import './styles/Contacto.css'
 import './styles/DetalleProd.css'
+import './styles/Card.css'
+import './styles/DetalleCard.css'
 import DetalleProd from "./pages/DetalleProd.jsx";
 import Home from "./pages/Home.jsx";
 import QuienesSomos from "./pages/QuienesSomos.jsx";
@@ -27,7 +29,7 @@ return (
             <Route path="/productos" element={<Productos/>} />
             <Route path="/quienessomos" element={<QuienesSomos/>} />
             <Route path="/contacto" element={<Contacto/>} />
-            <Route path="/detalleProd" element={<DetalleProd/>} />
+            <Route path="/detalleProd/:id" element={<DetalleProd/>} />
           </Route>
         </Routes>
         </BrowserRouter>
