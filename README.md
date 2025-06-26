@@ -3,6 +3,7 @@ API: https://fakestoreapi.com
 DOCUMENTACION: https://reactrouter.com/home
 BOOTSTRAP: https://getbootstrap.com/docs/5.3/getting-started/introduction/
 Extencion para ver que trae la API: JSON Viewer Pro
+Link de Categorias API: https://fakestoreapi.com/products/categories
 
 
 
