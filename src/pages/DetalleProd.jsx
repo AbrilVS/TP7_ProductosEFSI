@@ -4,14 +4,14 @@ import { useParams } from 'react-router-dom'
 import DetalleCard from '../components/DetalleCard';
 
 const DetalleProd = () => {
-  const { id } = useParams();
-  const [prod, setProd] = useState(null);
+  // const { id } = useParams();
+  // const [prod, setProd] = useState(null);
 
-  useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/${id}`).then(response => {
-      setProd(response.data);
-    });
-  }, [id]);
+  // useEffect(() => {
+  //   axios.get(`https://fakestoreapi.com/products/${id}`).then(response => {
+  //     setProd(response.data);
+  //   });
+  // }, [id]);
 
   return (
     <div>
