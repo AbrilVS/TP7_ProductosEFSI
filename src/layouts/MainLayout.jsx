@@ -4,9 +4,10 @@ import { Link, Outlet } from 'react-router-dom'
 const MainLayout = () => {
     const categorias = [
   // Reemplaza estos ejemplos por las categorías reales
-  { nombre: "Electrónica", path: "/productos/categoria/electronica" },
-  { nombre: "Ropa", path: "/productos/categoria/ropa" },
-  { nombre: "Juguetes", path: "/productos/categoria/juguetes" },
+  { nombre: "Electrónica", path: "/productos/electronics" },
+  { nombre: "Joyería", path: "/productos/jewelery" },
+  { nombre: "Ropa de hombre", path: "/productos/men's clothing" },
+  { nombre: "Ropa de mujer", path: "/productos/women's clothing" },
 ];
   return (
     <>
