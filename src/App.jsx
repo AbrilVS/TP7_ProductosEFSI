@@ -10,6 +10,7 @@ import './styles/Card.css'
 import './styles/DetalleCard.css'
 import './styles/MainLayout.css'
 import './styles/QuienesSomos.css'
+import './styles/Buscador.css'
 import DetalleProd from "./pages/DetalleProd.jsx";
 import Home from "./pages/Home.jsx";
 import QuienesSomos from "./pages/QuienesSomos.jsx";
@@ -18,8 +19,6 @@ import Productos from "./pages/Productos.jsx";
 
 
 function App() {
-
-
 
 return (
     <>
@@ -30,6 +29,7 @@ return (
             <Route path="/home" element={<Home/>} />
             <Route path="/productos" element={<Productos/>} />
             <Route path="/productos/:category" element={<Productos/>} />
+            <Route path="/productos/:title" element={<Productos/>} />
             <Route path="/quienessomos" element={<QuienesSomos/>} />
             <Route path="/contacto" element={<Contacto/>} />
             <Route path="/detalleProd/:id" element={<DetalleProd/>} />

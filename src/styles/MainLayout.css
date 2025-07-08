@@ -31,6 +31,8 @@
     min-height: 54px;
   }
   
+
+
   .nav-item {
     position: relative;
   }
@@ -152,3 +154,18 @@
       font-size: .98rem;
     }
   }
+
+  body, #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Opcional, si quieres centrar el contenido verticalmente */
+  justify-content: center; /* Opcional */
+}
+

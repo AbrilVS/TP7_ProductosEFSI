@@ -1,0 +1,38 @@
+.buscador-container {
+    position: absolute;
+    top: 40px;           /* Ajusta este valor según el padding/margin de tu navbar */
+    right: 200px;         /* Más cerca del navbar */
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+  }
+  
+  .buscador-input {
+    width: 230px;
+    max-width: 90vw;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.2rem;
+    border: 1.5px solid var(--azul-claro, #8ecae6);
+    font-size: 1rem;
+    outline: none;
+    background: #f8f5f1;
+    color: var(--azul-oscuro, #023047);
+    transition: border .2s, box-shadow .2s;
+    box-shadow: 0 2px 8px 0 #8ecae644;
+  }
+  .buscador-input:focus {
+    border: 2px solid var(--celeste, #219ebc);
+  }
+  
+  @media (max-width: 900px) {
+    .buscador-container {
+      top: 18px;
+      right: 12px;
+    }
+    .buscador-input {
+      width: 140px;
+      padding: 0.5rem 0.7rem;
+      font-size: 0.97rem;
+    }
+  }

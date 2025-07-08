@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 const Home = () => {
+  
   return (
     <main className="home-main">
 
@@ -48,9 +49,7 @@ const Home = () => {
         </p>
       </section>
 
-      <footer className="minimal-footer">
-        <span>&copy; 2025 Tienda Bonita · Hecho con <span className="heart">♥</span> en Argentina</span>
-      </footer>
+      
     </main>
   )
 }

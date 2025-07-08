@@ -38,7 +38,15 @@ const MainLayout = () => {
                 <Link className="nav-link" to="/contacto">Contacto</Link>
             </li>
         </ul>
-        <Outlet />
+
+
+       <div className="main-content">
+            <Outlet />
+        </div>
+
+        <footer className="minimal-footer">
+         <span>&copy; 2025 Tienda Bonita · Hecho con <span className="heart">♥</span> en Argentina</span>
+        </footer>
         
     </>
   )

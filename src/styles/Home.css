@@ -210,24 +210,6 @@
     line-height: 1.5;
   }
   
-  /* .minimal-footer {
-    text-align: center;
-    color: var(--azul-oscuro);
-    font-size: 1rem;
-    padding: 2.3rem 0 1.5rem 0;
-    width: 100%;
-    margin-top: auto;
-    background: var(--celeste);
-    letter-spacing: 0.01em;
-    border-radius: var(--radius) var(--radius) 0 0;
-  } */
-  
-  .heart {
-    color: var(--naranja);
-    font-size: 1.1em;
-    font-weight: 700;
-  }
-  
   @media (max-width: 900px) {
     .hero {
       flex-direction: column-reverse;
