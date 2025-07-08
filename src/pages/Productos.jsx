@@ -23,14 +23,14 @@ function Productos() {
     }
   }, [category])
 
-  // Filtrado en tiempo real por título (puedes sumar description/category si querés)
+  
   const productosFiltrados = productos.filter(item =>
     item.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <>
-      <h2>Productos</h2>
+    {/* buscador que filtra por titutlo, en tiempo real */}
       <Buscador value={search} onChange={setSearch} />
       <div className="cards-container">
         {productosFiltrados.map(item => (

@@ -4,24 +4,24 @@ const Contacto = () => {
   return (
     <div className="contacto-container">
       <div className="contacto-form-section">
-        <h1 className="contacto-title">Let's talk</h1>
+        <h1 className="contacto-title">¡Contactanos!</h1>
         <p className="contacto-description">
-          To request a quote or want to meet up for coffee, contact us directly or fill out the form and we will get back to you promptly.
+          Para organizar una reunión, rellena el siguiente formulario. 
         </p>
         <form className="contacto-form">
           <label>
-            Your Name
-            <input type="text" placeholder="Enter your name" />
+            Tu Nombre
+            <input type="text" placeholder="Ingrese su nombre" />
           </label>
           <label>
-            Your Email
-            <input type="email" placeholder="Enter your email" />
+            Tu Correo Electrónico
+            <input type="email" placeholder="Ingrese su email" />
           </label>
           <label>
-            Your Message
-            <textarea rows={4} placeholder="Type something if you want..." />
+            Tu Comentario
+            <textarea rows={4} placeholder="Escribe lo que desees..." />
           </label>
-          <button className="button-secondary" type="submit">Send Message</button>
+          <button className="button-secondary" type="submit">Enviar</button>
         </form>
       </div>
       <div className="contacto-info-section">
@@ -30,14 +30,13 @@ const Contacto = () => {
         </div>
         <div className="contacto-info">
           <p>
-            <span role="img" aria-label="location">📍</span> 151 New Park Ave, Hartford, CT 06106<br/>
-            United States
+            <span role="img" aria-label="location">📍</span> ORT, Yatay 240, CABA, Argentina<br/>
           </p>
           <p>
             <span role="img" aria-label="phone">📞</span> +1 (203) 302-9545
           </p>
           <p>
-            <span role="img" aria-label="email">✉️</span> contactus@inveritasoft.com
+            <span role="img" aria-label="email">✉️</span> contactus@gmail.com
           </p>
         </div>
         <div className="contacto-social">

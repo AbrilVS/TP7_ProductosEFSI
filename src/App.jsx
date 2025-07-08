@@ -29,7 +29,6 @@ return (
             <Route path="/home" element={<Home/>} />
             <Route path="/productos" element={<Productos/>} />
             <Route path="/productos/:category" element={<Productos/>} />
-            <Route path="/productos/:title" element={<Productos/>} />
             <Route path="/quienessomos" element={<QuienesSomos/>} />
             <Route path="/contacto" element={<Contacto/>} />
             <Route path="/detalleProd/:id" element={<DetalleProd/>} />

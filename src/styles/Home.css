@@ -4,7 +4,7 @@
     --azul-oscuro: #023047;
     --amarillo: #ffb703;
     --naranja: #fb8500;
-    --beige: #f8f5f1; /* fondo clarito tipo beige */
+    --beige: #f8f5f1; 
     --radius: 22px;
     --shadow: 0 8px 32px rgba(2,48,71,0.08);
   }
@@ -27,7 +27,7 @@
     text-align: center;
     font-family: 'Segoe UI', 'Arial', sans-serif;
   }
-
+  
   .home-main {
     min-height: 100vh;
     display: flex;
@@ -35,7 +35,7 @@
     background: var(--beige);
   }
   
-  /* Rest of your styles remain the same */
+  
   
   .hero {
     display: flex;

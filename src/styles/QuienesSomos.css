@@ -1,49 +1,67 @@
 :root {
-    --azul-claro: #8ecae6;
-    --celeste: #219ebc;
-    --azul-oscuro: #023047;
-    --amarillo: #ffb703;
-    --naranja: #fb8500;
-    --beige: #f8f5f1;
-  }
-  
+  --azul-claro: #8ecae6;
+  --celeste: #219ebc;
+  --azul-oscuro: #023047;
+  --amarillo: #ffb703;
+  --naranja: #fb8500;
+  --beige: #f8f5f1;
+}
+
+.about-us-section {
+  max-width: 620px;
+  margin: 3.5rem auto 0 auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(120deg, #fff 60%, var(--beige) 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(2,48,71,0.08);
+  text-align: center;
+}
+
+.about-title {
+  color: var(--naranja);
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.03em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.about-text {
+  color: var(--azul-oscuro);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-weight: 500;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
   .about-us-section {
-    max-width: 620px;
-    margin: 3.5rem auto 0 auto;
-    padding: 2.5rem 2rem;
-    background: linear-gradient(120deg, #fff 60%, var(--beige) 100%);
-    border-radius: 22px;
-    box-shadow: 0 8px 32px rgba(2,48,71,0.08);
-    text-align: center;
+    max-width: 97vw;
+    padding: 1.5rem 1rem;
+    margin-top: 2.5rem;
   }
-  
   .about-title {
-    color: var(--naranja);
-    font-size: 2.1rem;
-    font-weight: 800;
-    margin-bottom: 1.3rem;
-    letter-spacing: 0.03em;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.5rem;
   }
-  
   .about-text {
-    color: var(--azul-oscuro);
-    font-size: 1.15rem;
-    line-height: 1.7;
-    font-weight: 500;
-    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    margin: 0 auto;
+    font-size: 1.04rem;
   }
-  
-  @media (max-width: 700px) {
-    .about-us-section {
-      padding: 1.3rem 0.6rem;
-      margin-top: 2rem;
-    }
-    .about-title {
-      font-size: 1.3rem;
-    }
-    .about-text {
-      font-size: 1rem;
-    }
+}
+
+
+@media (max-width: 700px) {
+  .about-us-section {
+    padding: 1.3rem 0.6rem;
+    margin-top: 1.2rem;
+    max-width: 99vw;
+    border-radius: 15px;
   }
+  .about-title {
+    font-size: 1.13rem;
+    margin-bottom: 0.7rem;
+  }
+  .about-text {
+    font-size: 0.98rem;
+  }
+}
