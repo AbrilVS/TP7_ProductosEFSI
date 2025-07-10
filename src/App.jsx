@@ -22,18 +22,18 @@ function App() {
 
 return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MainLayout />} >   
-            <Route index element={<Home />} />    
-            <Route path="/home" element={<Home/>} />
-            <Route path="/productos" element={<Productos/>} />
-            <Route path="/productos/:category" element={<Productos/>} />
-            <Route path="/quienessomos" element={<QuienesSomos/>} />
-            <Route path="/contacto" element={<Contacto/>} />
-            <Route path="/detalleProd/:id" element={<DetalleProd/>} />
-          </Route>
-        </Routes>
+      <BrowserRouter basename="/TP7_ProductosEFSI">
+          <Routes>
+            <Route path="/" element={<MainLayout />} >   
+              <Route index element={<Home />} />    
+              <Route path="/home" element={<Home/>} />
+              <Route path="/productos" element={<Productos/>} />
+              <Route path="/productos/:category" element={<Productos/>} />
+              <Route path="/quienessomos" element={<QuienesSomos/>} />
+              <Route path="/contacto" element={<Contacto/>} />
+              <Route path="/detalleProd/:id" element={<DetalleProd/>} />
+            </Route>
+          </Routes>
         </BrowserRouter>
     </>
   )

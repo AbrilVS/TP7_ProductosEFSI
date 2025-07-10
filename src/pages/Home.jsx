@@ -1,13 +1,12 @@
 import React from 'react'
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+
 const Home = () => {
   
   return (
     <main className="home-main">
-
         <h1 className="logo">Product Store</h1>
-
       <section className="hero">
         <div className="hero-content">
           <h1>Descubrí lo mejor para vos</h1>
