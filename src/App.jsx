@@ -16,13 +16,14 @@ import Home from "./pages/Home.jsx";
 import QuienesSomos from "./pages/QuienesSomos.jsx";
 import Contacto from "./pages/Contacto.jsx";
 import Productos from "./pages/Productos.jsx";
+import CarritoProvider from "./contexts/carritoContext.js";
 
 
 function App() {
 
 return (
-    <>
-      <BrowserRouter basename="/TP7_ProductosEFSI">
+    <CarritoProvider>
+        <BrowserRouter basename="/TP7_ProductosEFSI">
           <Routes>
             <Route path="/" element={<MainLayout />} >   
               <Route index element={<Home />} />    
@@ -35,7 +36,7 @@ return (
             </Route>
           </Routes>
         </BrowserRouter>
-    </>
+      </CarritoProvider>
   )
 }
 
