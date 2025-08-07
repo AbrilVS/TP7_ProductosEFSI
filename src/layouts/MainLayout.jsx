@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import CartWidget from '../components/CartWidget';
+
 
 const MainLayout = () => {
     const categorias = [
@@ -37,6 +39,10 @@ const MainLayout = () => {
             <li className="nav-item">
                 <Link className="nav-link" to="/contacto">Contacto</Link>
             </li>
+            <li className="nav-item">
+                <CartWidget />
+            </li>
+
         </ul>
 
 

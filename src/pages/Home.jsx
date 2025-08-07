@@ -1,16 +1,16 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-import { CarritoContext } from '../contexts/carritoContext';
+import { CarritoContext } from '../contexts/CarritoContext';
 
 const Home = () => {
   
-  const {saludar} = useContext(CarritoContext)
+ 
 
   return (
     <main className="home-main">
         <h1 className="logo">Product Store</h1>
-        <button onClick={saludar}>prueba saludar</button>
+        
       <section className="hero">
         <div className="hero-content">
           <h1>Descubrí lo mejor para vos</h1>

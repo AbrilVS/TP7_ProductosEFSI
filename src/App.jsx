@@ -16,7 +16,7 @@ import Home from "./pages/Home.jsx";
 import QuienesSomos from "./pages/QuienesSomos.jsx";
 import Contacto from "./pages/Contacto.jsx";
 import Productos from "./pages/Productos.jsx";
-import CarritoProvider from "./contexts/carritoContext.js";
+import CarritoProvider from "./contexts/CarritoContext.jsx";
 
 
 function App() {
