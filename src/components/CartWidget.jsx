@@ -1,5 +1,6 @@
 
 import { useContext, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { CarritoContext } from "../contexts/CarritoContext";
 
 const CartWidget = () => {
@@ -65,7 +66,9 @@ const CartWidget = () => {
                         >
                           +
                         </button>
-                        <span>${(item.price * item.cantidad).toFixed(2)}</span>
+                        <span>
+                          {(item.price * item.cantidad).toLocaleString("es-AR", { style: "currency", currency: "ARS" })}
+                        </span>
                         <button
                           className="btn btn-sm btn-link text-danger p-0"
                           onClick={() => removeFromCart(item.id)}
@@ -82,13 +85,16 @@ const CartWidget = () => {
                 <div className="cart-total">
                   <span>Total:</span>
                   <span>
-                    {getTotal().toFixed(2).toLocaleString("es-AR", { style: "currency", currency: "ARS" })}
+                    {getTotal().toLocaleString("es-AR", { style: "currency", currency: "ARS" })}
                   </span>
                 </div>
 
                 <button onClick={clearCart} className="btn btn-danger w-100">
                   Vaciar carrito
                 </button>
+                <Link to="/checkout" className="btn custom-btn w-100" style={{ marginTop: 8 }}>
+                  Ir al checkout
+                </Link>
               </>
             )}
           </div>

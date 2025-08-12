@@ -12,11 +12,13 @@ import './styles/MainLayout.css'
 import './styles/QuienesSomos.css'
 import './styles/Buscador.css'
 import './styles/CartWidget.css'
+import './styles/Checkout.css'
 import DetalleProd from "./pages/DetalleProd.jsx";
 import Home from "./pages/Home.jsx";
 import QuienesSomos from "./pages/QuienesSomos.jsx";
 import Contacto from "./pages/Contacto.jsx";
 import Productos from "./pages/Productos.jsx";
+import Checkout from "./pages/Checkout.jsx";
 import CarritoProvider from "./contexts/CarritoContext.jsx";
 
 
@@ -34,6 +36,7 @@ return (
               <Route path="/quienessomos" element={<QuienesSomos/>} />
               <Route path="/contacto" element={<Contacto/>} />
               <Route path="/detalleProd/:id" element={<DetalleProd/>} />
+              <Route path="/checkout" element={<Checkout/>} />
             </Route>
           </Routes>
         </CarritoProvider>
