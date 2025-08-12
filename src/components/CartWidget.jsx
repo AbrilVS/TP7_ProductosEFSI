@@ -1,4 +1,4 @@
-// components/CartWidget.jsx
+
 import { useContext, useEffect, useRef, useState } from "react";
 import { CarritoContext } from "../contexts/CarritoContext";
 
@@ -9,7 +9,7 @@ const CartWidget = () => {
 
   const totalItems = cartItems.reduce((acc, item) => acc + item.cantidad, 0);
 
-  // cerrar al click afuera
+  
   useEffect(() => {
     const onClickOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setIsOpen(false);

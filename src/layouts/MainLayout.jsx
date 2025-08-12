@@ -1,4 +1,4 @@
-// MainLayout.jsx
+
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import CartWidget from '../components/CartWidget';
@@ -15,12 +15,12 @@ const MainLayout = () => {
     <>
       <header className="app-header">
         <div className="app-bar">
-          {/* Izquierda: carrito */}
+          
           <div className="app-left">
             <CartWidget />
           </div>
 
-          {/* Centro: navbar (no se superpone con nada) */}
+          
           <nav className="app-center">
             <ul className="nav nav-pills app-nav">
               <li className="nav-item">
@@ -49,7 +49,7 @@ const MainLayout = () => {
             </ul>
           </nav>
 
-          {/* Derecha: espacio/placeholder (por si después agregás buscador o user) */}
+          
           <div className="app-right" />
         </div>
       </header>

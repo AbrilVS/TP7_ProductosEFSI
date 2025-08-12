@@ -1,42 +1,77 @@
-/* Mantener botón estable y compacto */
+/* Contenedor del widget con estilo consistente al navbar */
+.cart-widget {
+  position: relative;
+}
+
+/* Botón del carrito con estética de pill similar al navbar */
 .cart-icon {
-    width: 44px;          /* evita cambios de ancho al pintar badge */
-    height: 40px;         /* altura constante */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  /* Dropdown del carrito: no empuja layout */
-  .cart-widget {
-    /* el contenedor ya es position:relative via className; dejar así */
-  }
-  
-  .cart-dropdown {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;                        /* queda pegado al botón; podés cambiar a right:0 si lo querés alineado a la derecha */
-    min-width: 280px;
-    max-width: 340px;
-    max-height: 70vh;
-    overflow: auto;
-    background: #fff;
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: .5rem;
-    z-index: 1080;                  /* por encima del contenido */
-  }
-  
-  /* Evitar “salto” de layout por ancho de lista */
-  .cart-item span:first-child {
-    max-width: 180px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  /* Si tu header es sticky/fijo, da un respiro al contenido */
-  .app-header + .main-content {
-    /* si tu header crece, ajustá este padding-top en lugar de usar márgenes mágicos */
-  }
+  position: relative;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--azul-claro);
+  border: 1.5px solid var(--celeste);
+  box-shadow: var(--shadow);
+  font-size: 0; /* oculta el emoji del botón */
+}
+
+/* Ícono SVG con mask para poder tintarlo via background */
+.cart-icon::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: var(--azul-oscuro);
+  -webkit-mask: url('../assets/cart-shopping-solid.svg') no-repeat center / contain;
+  mask: url('../assets/cart-shopping-solid.svg') no-repeat center / contain;
+}
+
+.cart-icon:hover { background: linear-gradient(90deg, var(--amarillo), var(--naranja)); }
+.cart-icon:hover::before { background: var(--azul-oscuro); }
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--celeste);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.72rem;
+  line-height: 1;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(2,48,71,0.15);
+}
+
+/* Dropdown del carrito con tarjeta flotante a juego */
+.cart-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 280px;
+  max-width: 340px;
+  max-height: 70vh;
+  overflow: auto;
+  background: #fff;
+  border: 1.5px solid var(--celeste);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(2,48,71,0.11);
+  z-index: 112;
+}
+
+.cart-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.cart-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cart-item .title { max-width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.cart-total { display: flex; justify-content: space-between; gap: 8px; padding: 10px 0; font-weight: 700; }
   

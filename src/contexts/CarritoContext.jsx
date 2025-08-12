@@ -1,9 +1,26 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CarritoContext = createContext();
 
 const CarritoProvider = ({ children }) => {
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(() => {
+        try {
+            const stored = localStorage.getItem("cartItems");
+            return stored ? JSON.parse(stored) : [];
+        } catch (error) {
+            console.error("No se pudo leer cartItems desde localStorage:", error);
+            return [];
+        }
+    });
+
+    
+    useEffect(() => {
+        try {
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        } catch (error) {
+            console.error("No se pudo guardar cartItems en localStorage:", error);
+        }
+    }, [cartItems]);
 
     const addToCart = (producto ) => {
         setCartItems((prevItems) => {
