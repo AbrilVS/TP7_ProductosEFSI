@@ -3,7 +3,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { CarritoContext } from "../contexts/CarritoContext";
 
 const CartWidget = () => {
-  const { cartItems, removeFromCart, clearCart, getTotal } = useContext(CarritoContext);
+  const { cartItems, removeFromCart, clearCart, getTotal, sumarCart, restarCart } = useContext(CarritoContext);
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
 
@@ -44,8 +44,27 @@ const CartWidget = () => {
                 <ul className="cart-list">
                   {cartItems.map((item) => (
                     <li key={item.id} className="cart-item">
-                      <span className="title">{item.title} ×{item.cantidad}</span>
-                      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span className="title">{item.title}</span>
+                      <div className="cart-actions">
+                        <button
+                          type="button"
+                          className="qty-btn qty-btn--minus"
+                          onClick={() => restarCart(item.id)}
+                          aria-label={`Restar 1 a ${item.title}`}
+                          title="-1"
+                        >
+                          −
+                        </button>
+                        <span className="qty-value" aria-label={`Cantidad de ${item.title}`}>{item.cantidad}</span>
+                        <button
+                          type="button"
+                          className="qty-btn qty-btn--plus"
+                          onClick={() => sumarCart(item.id)}
+                      
+                          
+                        >
+                          +
+                        </button>
                         <span>${item.price * item.cantidad}</span>
                         <button
                           className="btn btn-sm btn-link text-danger p-0"
@@ -62,7 +81,9 @@ const CartWidget = () => {
 
                 <div className="cart-total">
                   <span>Total:</span>
-                  <span>${getTotal()}</span>
+                  <span>
+                    {getTotal().toLocaleString("es-AR", { style: "currency", currency: "ARS" })}
+                  </span>
                 </div>
 
                 <button onClick={clearCart} className="btn btn-danger w-100">

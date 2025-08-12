@@ -51,6 +51,30 @@ const CarritoProvider = ({ children }) => {
         return cartItems.reduce((total, item) => total + item.price * item.cantidad, 0);
     };
 
+    // Suma 1 unidad al producto indicado
+    const sumarCart = (idProducto) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === idProducto
+                    ? { ...item, cantidad: item.cantidad + 1 }
+                    : item
+            )
+        );
+    };
+
+    // Resta 1 unidad; si llega a 0, elimina el producto
+    const restarCart = (idProducto) => {
+        setCartItems((prevItems) =>
+            prevItems
+                .map((item) =>
+                    item.id === idProducto
+                        ? { ...item, cantidad: Math.max(0, item.cantidad - 1) }
+                        : item
+                )
+                .filter((item) => item.cantidad > 0)
+        );
+    };
+    
     return (
         <CarritoContext.Provider
             value={{
@@ -58,12 +82,17 @@ const CarritoProvider = ({ children }) => {
                 addToCart,
                 removeFromCart,
                 clearCart,
-                getTotal
+                getTotal,
+                sumarCart,
+                restarCart
             }}
         >
             {children}
         </CarritoContext.Provider>
     );
+
+    
+    
 };
 
 export default CarritoProvider;

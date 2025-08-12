@@ -96,16 +96,17 @@
 
 .custom-btn {
   background: linear-gradient(90deg, var(--amarillo) 0%, var(--naranja) 100%);
-  border: none;
   color: var(--azul-oscuro);
-  padding: 0.52rem 1.2rem;
-  border-radius: 2rem;
+  padding: 0.42rem 0.9rem; /* más bajo */
+  border-radius: 12px; /* más cuadrado */
+  border: 1.5px solid var(--celeste);
   font-weight: 700;
-  font-size: 1.03rem;
+  font-size: 0.98rem; /* un poco más chico */
+  line-height: 1.1;
   margin-bottom: 0.15rem;
   margin-top: 0.28rem;
-  transition: background 0.16s, color 0.16s, transform 0.15s;
-  box-shadow: 0 2px 8px rgba(251, 133, 0, 0.10);
+  transition: background 0.16s, color 0.16s, transform 0.12s, box-shadow 0.16s;
+  box-shadow: 0 3px 10px rgba(2, 48, 71, 0.08);
   cursor: pointer;
   outline: none;
 }
@@ -113,8 +114,28 @@
 .custom-btn:hover, .custom-btn:focus {
   background: linear-gradient(90deg, var(--naranja) 0%, var(--amarillo) 100%);
   color: var(--celeste);
-  transform: scale(1.07);
-  box-shadow: 0 8px 20px rgba(251, 133, 0, 0.13);
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 8px 18px rgba(2, 48, 71, 0.12);
+}
+
+.custom-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Contenedor para alinear ambos botones en una fila con mismo estilo */
+.card-actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Garantiza que el Link herede el aspecto del botón */
+.custom-btn,
+.custom-btn:where(a) {
+  text-decoration: none;
+  text-align: center;
 }
 
 
