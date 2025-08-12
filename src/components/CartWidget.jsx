@@ -65,7 +65,7 @@ const CartWidget = () => {
                         >
                           +
                         </button>
-                        <span>${item.price * item.cantidad}</span>
+                        <span>${(item.price * item.cantidad).toFixed(2)}</span>
                         <button
                           className="btn btn-sm btn-link text-danger p-0"
                           onClick={() => removeFromCart(item.id)}
@@ -82,7 +82,7 @@ const CartWidget = () => {
                 <div className="cart-total">
                   <span>Total:</span>
                   <span>
-                    {getTotal().toLocaleString("es-AR", { style: "currency", currency: "ARS" })}
+                    {getTotal().toFixed(2).toLocaleString("es-AR", { style: "currency", currency: "ARS" })}
                   </span>
                 </div>
 
