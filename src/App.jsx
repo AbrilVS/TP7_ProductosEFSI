@@ -11,6 +11,7 @@ import './styles/DetalleCard.css'
 import './styles/MainLayout.css'
 import './styles/QuienesSomos.css'
 import './styles/Buscador.css'
+import './styles/CartWidget.css'
 import DetalleProd from "./pages/DetalleProd.jsx";
 import Home from "./pages/Home.jsx";
 import QuienesSomos from "./pages/QuienesSomos.jsx";
@@ -22,8 +23,8 @@ import CarritoProvider from "./contexts/CarritoContext.jsx";
 function App() {
 
 return (
-    <CarritoProvider>
-        <BrowserRouter basename="/TP7_ProductosEFSI">
+      <BrowserRouter basename="/TP7_ProductosEFSI">
+        <CarritoProvider>
           <Routes>
             <Route path="/" element={<MainLayout />} >   
               <Route index element={<Home />} />    
@@ -35,8 +36,8 @@ return (
               <Route path="/detalleProd/:id" element={<DetalleProd/>} />
             </Route>
           </Routes>
-        </BrowserRouter>
-      </CarritoProvider>
+        </CarritoProvider>
+      </BrowserRouter>
   )
 }
 
