@@ -8,7 +8,6 @@
   width: auto;
 }
 
-/* Input principal */
 .buscador-input {
   width: 230px;
   max-width: 90vw;
@@ -27,7 +26,6 @@
   border: 2px solid var(--celeste, #219ebc);
 }
 
-
 @media (max-width: 900px) {
   .buscador-container {
     top: 18px;
@@ -39,7 +37,6 @@
     font-size: 0.97rem;
   }
 }
-
 
 @media (max-width: 600px) {
   .buscador-container {

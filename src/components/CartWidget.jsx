@@ -27,7 +27,7 @@ const CartWidget = () => {
         onClick={() => setIsOpen(o => !o)}
         aria-expanded={isOpen}
         aria-haspopup="true"
-        aria-label="Abrir carrito"
+       
       >
         🛒
         <span className="cart-badge">{totalItems}</span>

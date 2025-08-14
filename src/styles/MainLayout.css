@@ -9,14 +9,14 @@
   --shadow: 0 8px 32px rgba(2,48,71,0.07);
 }
 
-/* Layout del header para ubicar carrito (izquierda) y navbar (centro) */
+
 .app-header { position: relative; z-index: 100; }
 .app-bar { position: relative; }
 .app-left {
   position: fixed;
   top: 25px;
   left: clamp(8px, 2vw, 24px);
-  z-index: 111; /* por encima del contenido y debajo/igual del nav */
+  z-index: 111; 
 }
 .app-right { position: fixed; top: 25px; right: clamp(8px, 2vw, 24px); }
 

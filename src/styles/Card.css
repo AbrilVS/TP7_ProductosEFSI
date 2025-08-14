@@ -8,8 +8,6 @@
   --radius: 22px;
   --shadow: 0 8px 32px rgba(2,48,71,0.10);
 }
-
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -22,8 +20,6 @@
   position: relative;
   z-index: 1;
 }
-
-
 .custom-card {
   flex: 1 1 260px;
   max-width: 295px;
@@ -41,12 +37,10 @@
   position: relative;
   overflow: hidden;
 }
-
 .custom-card:hover {
   box-shadow: 0 12px 32px rgba(2,48,71,0.16);
   transform: translateY(-6px) scale(1.032);
 }
-
 .card-img-top {
   width: 100%;
   height: 185px;
@@ -55,7 +49,6 @@
   padding: 1.2rem 1.2rem 0.7rem 1.2rem;
   transition: background 0.18s;
 }
-
 .card-body {
   width: 100%;
   padding: 1.1rem 1rem 0.8rem 1rem;
@@ -64,7 +57,6 @@
   align-items: center;
   min-height: 160px;
 }
-
 .card-title {
   font-size: 1.13rem;
   font-weight: 800;
@@ -74,7 +66,6 @@
   letter-spacing: 0.03em;
   min-height: 2.3em;
 }
-
 .card-desc {
   color: #39506e;
   font-size: 0.99rem;
@@ -83,7 +74,6 @@
   margin: 0.13em 0 0.85em 0;
   min-height: 2.1em;
 }
-
 .card-price {
   font-size: 1.12rem;
   color: var(--naranja);
@@ -93,15 +83,14 @@
   letter-spacing: 0.01em;
   text-align: center;
 }
-
 .custom-btn {
   background: linear-gradient(90deg, var(--amarillo) 0%, var(--naranja) 100%);
   color: var(--azul-oscuro);
-  padding: 0.42rem 0.9rem; /* más bajo */
-  border-radius: 12px; /* más cuadrado */
+  padding: 0.42rem 0.9rem; 
+  border-radius: 12px; 
   border: 1.5px solid var(--celeste);
   font-weight: 700;
-  font-size: 0.98rem; /* un poco más chico */
+  font-size: 0.98rem;
   line-height: 1.1;
   margin-bottom: 0.15rem;
   margin-top: 0.28rem;
@@ -110,7 +99,6 @@
   cursor: pointer;
   outline: none;
 }
-
 .custom-btn:hover, .custom-btn:focus {
   background: linear-gradient(90deg, var(--naranja) 0%, var(--amarillo) 100%);
   color: var(--celeste);
@@ -121,8 +109,6 @@
 .custom-btn:active {
   transform: translateY(0) scale(0.98);
 }
-
-/* Contenedor para alinear ambos botones en una fila con mismo estilo */
 .card-actions {
   display: grid;
   grid-auto-flow: column;
@@ -130,21 +116,16 @@
   gap: 10px;
   width: 100%;
 }
-
-/* Garantiza que el Link herede el aspecto del botón */
 .custom-btn,
 .custom-btn:where(a) {
   text-decoration: none;
   text-align: center;
 }
-
-
 @media (min-width: 600px) {
   .cards-container {
     margin-top: 120px;
   }
 }
-
 @media (max-width: 900px) {
   .cards-container {
     gap: 1.6rem;
@@ -163,8 +144,6 @@
     padding: 0.8rem 0.5rem 0.7rem 0.5rem;
   }
 }
-
-
 @media (max-width: 599px) {
   .cards-container {
     flex-direction: column;

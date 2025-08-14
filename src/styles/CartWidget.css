@@ -1,9 +1,7 @@
-/* Contenedor del widget con estilo consistente al navbar */
+
 .cart-widget {
   position: relative;
 }
-
-/* Botón del carrito con estética de pill similar al navbar */
 .cart-icon {
   position: relative;
   width: 46px;
@@ -17,10 +15,8 @@
   background: var(--azul-claro);
   border: 1.5px solid var(--celeste);
   box-shadow: var(--shadow);
-  font-size: 0; /* oculta el emoji del botón */
+  font-size: 0; 
 }
-
-/* Ícono SVG con mask para poder tintarlo via background */
 .cart-icon::before {
   content: "";
   display: inline-block;
@@ -30,10 +26,8 @@
   -webkit-mask: url('../assets/cart-shopping-solid.svg') no-repeat center / contain;
   mask: url('../assets/cart-shopping-solid.svg') no-repeat center / contain;
 }
-
 .cart-icon:hover { background: linear-gradient(90deg, var(--amarillo), var(--naranja)); }
 .cart-icon:hover::before { background: var(--azul-oscuro); }
-
 .cart-badge {
   position: absolute;
   top: -6px;
@@ -53,14 +47,13 @@
   box-shadow: 0 2px 8px rgba(2,48,71,0.15);
 }
 
-/* Dropdown del carrito con tarjeta flotante a juego */
 .cart-dropdown {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  min-width: 320px; /* más ancho para evitar scroll interno frecuente */
+  min-width: 320px; 
   max-width: 450px;
-  max-height: 82vh; /* más alto para minimizar scroll interno */
+  max-height: 82vh; 
   overflow: auto;
   background: #fff;
   border: 1.5px solid var(--celeste);
@@ -75,7 +68,6 @@
 
 .cart-total { display: flex; justify-content: space-between; gap: 8px; padding: 10px 0; font-weight: 700; }
 
-/* Acciones de cantidad */
 .cart-actions { display: inline-flex; align-items: center; gap: 8px; }
 .qty-btn {
   width: 28px;

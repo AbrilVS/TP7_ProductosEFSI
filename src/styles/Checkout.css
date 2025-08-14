@@ -38,7 +38,7 @@
 .co-title { color: var(--azul-oscuro); font-weight: 700; }
 .co-subtotal { font-weight: 700; color: var(--naranja); }
 
-/* Cantidad +/− en checkout */
+
 .co-qty { display: inline-flex; align-items: center; gap: 8px; }
 .co-qty .qty-btn {
   width: 28px;

@@ -39,14 +39,14 @@ function DetalleCard({ product }) {
               <span className="price">${product.price}</span>
             </div>
 
-            {/* Selector de cantidad */}
+            {/* cantidad */}
             <div className="d-flex align-items-center mb-3">
               <button className="btn btn-outline-secondary me-2" onClick={disminuir}>–</button>
               <span className="fs-5">{cantidad}</span>
               <button className="btn btn-outline-secondary ms-2" onClick={aumentar}>+</button>
             </div>
 
-            {/* Botón Comprar */}
+            {/* botón de comprar */}
             <button className="btn btn-primary" onClick={handleComprar}>
               Agregar al carrito
             </button>
