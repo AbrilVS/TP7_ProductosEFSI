@@ -1,6 +1,6 @@
-
 import React, { useState, useContext } from 'react';
 import { CarritoContext } from '../contexts/CarritoContext'; 
+import PropTypes, { number, shape, string } from 'prop-types';
 
 function DetalleCard({ product }) {
   const { addToCart } = useContext(CarritoContext); 
@@ -58,5 +58,16 @@ function DetalleCard({ product }) {
     <div>Loading....</div>
   );
 }
+
+DetalleCard.propTypes = {
+  product: shape({
+    id: number.isRequired,
+    title: string.isRequired,
+    category: string.isRequired,
+    description: string.isRequired,
+    price: number.isRequired,
+    image: string.isRequired,
+  }),
+};
 
 export default DetalleCard;
