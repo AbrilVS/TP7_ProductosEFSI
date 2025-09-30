@@ -1,9 +1,19 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CarritoContext } from '../contexts/CarritoContext';
-import PropTypes, { number, shape, string } from 'prop-types';
 
-function Card({ item }) {
+type ProductProp = {
+  id: number,
+  title: string,
+  price: number,
+  image: string,
+};
+
+type CardProp = {
+  item: ProductProp,
+};
+
+function Card({ item }:CardProp) {
   const { addToCart } = useContext(CarritoContext);
   return (
     <div className="custom-card card">
@@ -27,13 +37,6 @@ function Card({ item }) {
   );
 }
 
-Card.propTypes = {
-  item: shape({
-    id: number.isRequired,
-    title: string.isRequired,
-    price: number.isRequired,
-    image: string.isRequired,
-  }).isRequired,
-};
+
 
 export default Card;

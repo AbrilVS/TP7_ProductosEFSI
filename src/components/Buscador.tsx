@@ -1,7 +1,9 @@
-import React from 'react';
-import PropTypes, { func, string } from 'prop-types';
+type BuscadorProps = {
+  value: string,
+  onChange: (value:string)=>void,
+};
 
-function Buscador({ value, onChange }) {
+function Buscador({ value, onChange }:BuscadorProps) {
   return (
     <div className="buscador-container">
       <input
@@ -15,9 +17,6 @@ function Buscador({ value, onChange }) {
   );
 }
 
-Buscador.propTypes = {
-  value: string.isRequired,
-  onChange: func.isRequired,
-};
+
 
 export default Buscador;
